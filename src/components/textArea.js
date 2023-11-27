@@ -6,9 +6,7 @@ export default function TextArea(props) {
   return (
     <>
       <div className='container mt-5'>
-        <h1>
-          {props.heading} - {text}
-        </h1>
+        <h1>{props.heading}</h1>
 
         <div className='form-group'>
           <textarea
@@ -17,6 +15,7 @@ export default function TextArea(props) {
             id='textInput'
             placeholder='Type something...'
             value={text}
+            rows='8'
             onChange={(event) => {
               setText(event.target.value)
             }}
@@ -39,6 +38,15 @@ export default function TextArea(props) {
         >
           Convert to Lowercase
         </button>
+      </div>
+      <div className='container my-5'>
+        <h2>Your Text Summary</h2>
+        <p>
+          {text.split(' ').length} Words and {text.length} Characters
+        </p>
+        <p>{text.split(' ').length * 0.008} minutes read</p>
+        <h2>preview</h2>
+        <p>{text}</p>
       </div>
     </>
   )

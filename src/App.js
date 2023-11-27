@@ -6,7 +6,7 @@ function App() {
       <Navbar title='Text Utils' aboutText='About' />
       {/* <Navbar></Navbar> */}
       <div className='container'>
-        <TextArea heading='Text' />
+        <TextArea heading='Enter text to Analyse' />
       </div>
     </>
   )
